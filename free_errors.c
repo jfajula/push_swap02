@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   free_errors.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jafajula <jafajula@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/22 19:45:19 by jafajula          #+#    #+#             */
-/*   Updated: 2026/01/22 20:16:22 by jafajula         ###   ########.fr       */
+/*   Created: 2026/01/22 20:23:39 by jafajula          #+#    #+#             */
+/*   Updated: 2026/01/22 20:27:44 by jafajula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main (int argc, char **argv)
+void	free_argv(char **argv)
 {
-	t_stack_node	*a;
-	t_stack_node	*b;
-	
-	a = NULL;
-	b = NULL;
-	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return (1);
-	else if (argc == 2)
-		argv = ft_split(argv[1], ' ');
-	init_stack(&a, argv + 1, argc == 2);
-	if (!stack_sort(a))
-	{
-		if (stack_len(a) == 2)
-			sa(&a, false);
-		else if (stack_len(a) == 3)
-			sort_three(&a);
-		else
-			sort_stack(&a, &b);
-	}
-	free_stack(a);
+	int	i;
+
+	i = -1;
+	if (argv == NULL || *argv == NULL)
+		return ;
+	while (argv[i]);
+		free(argv[i++]);
+	free(argv - 1);
 }
+
+void	free_stack(t_stack_node **stack)
+{
+
+}
+
+void	free_error(t_stack_node **a, char **argv, bool argc_2)
+{
+	
+}
+

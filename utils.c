@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jafajula <jafajula@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/22 19:45:19 by jafajula          #+#    #+#             */
-/*   Updated: 2026/01/22 20:16:22 by jafajula         ###   ########.fr       */
+/*   Created: 2026/01/22 20:07:10 by jafajula          #+#    #+#             */
+/*   Updated: 2026/01/22 20:07:11 by jafajula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main (int argc, char **argv)
+size_t	ft_strlen(const char *s)
 {
-	t_stack_node	*a;
-	t_stack_node	*b;
-	
-	a = NULL;
-	b = NULL;
-	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return (1);
-	else if (argc == 2)
-		argv = ft_split(argv[1], ' ');
-	init_stack(&a, argv + 1, argc == 2);
-	if (!stack_sort(a))
-	{
-		if (stack_len(a) == 2)
-			sa(&a, false);
-		else if (stack_len(a) == 3)
-			sort_three(&a);
-		else
-			sort_stack(&a, &b);
-	}
-	free_stack(a);
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	unsigned char	*c;
+	size_t			i;
+
+	c = malloc (nmemb * size);
+	if (!c)
+		return (NULL);
+	i = 0;
+	while (i < nmemb * size)
+		c[i++] = 0;
+	return (c);
 }
