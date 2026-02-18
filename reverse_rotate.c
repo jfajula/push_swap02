@@ -6,7 +6,7 @@
 /*   By: jafajula <jafajula@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 19:46:31 by jafajula          #+#    #+#             */
-/*   Updated: 2026/02/11 20:18:30 by jafajula         ###   ########.fr       */
+/*   Updated: 2026/02/18 21:25:02 by jafajula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	reverse_rotate(t_stack_node **stack)
 	len = stack_len(*stack);
 	if (stack == NULL || *stack == NULL || len == 1)
 		return ;
-	last = locale_last_node(*stack);
+	last = locate_last_node(*stack);
 	last->prev->next = NULL;
 	last->next = *stack;
 	last->prev = NULL;

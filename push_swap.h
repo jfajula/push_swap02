@@ -6,7 +6,7 @@
 /*   By: jafajula <jafajula@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 19:46:50 by jafajula          #+#    #+#             */
-/*   Updated: 2026/02/11 20:54:08 by jafajula         ###   ########.fr       */
+/*   Updated: 2026/02/18 22:30:07 by jafajula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ static void		body(char const *s, char c, char **res);
 static long		ft_atol(const char *str);
 void			init_stack(t_stack_node **a, char **argv, bool argc_2);
 //init_utils
-t_stack_node	*locale_last_node(t_stack_node *head);
+t_stack_node	*locate_last_node(t_stack_node *head);
 void			append_node(t_stack_node **stack, int n);
-t_stack_node	*locale_smallest(t_stack_node *stack);
+t_stack_node	*locate_smallest(t_stack_node *stack);
 t_stack_node	*cheapest(t_stack_node *stack);
 int				stack_len(t_stack_node *stack);
 
@@ -72,16 +72,23 @@ void			ra(t_stack_node **a);
 void			rb(t_stack_node **b);
 void			rr(t_stack_node **a, t_stack_node **b);
 //set_stack
-static void		swap(t_stack_node **head);
-void			sa(t_stack_node **a);
-void			sb(t_stack_node **b);
-void			ss(t_stack_node **a, t_stack_node **b);
+void			set_current_position(t_stack_node *stack);
+void			set_target_node(t_stack_node *a, t_stack_node *b);
+void			set_cost(t_stack_node *a, t_stack_node *b);
+void			set_cheapest(t_stack_node *b);
+void			init_nodes(t_stack_node *a, t_stack_node *b);
 //sort_stack
+void			finish_rotation(t_stack_node **s,
+					t_stack_node *top, char stack_name);
+void			sort_stack(t_stack_node **a, t_stack_node **b);
 
 //sort_three
 
 //swap
-
+static void		swap(t_stack_node **head);
+void			sa(t_stack_node **a);
+void			sb(t_stack_node **b);
+void			ss(t_stack_node **a, t_stack_node **b);
 //utils
 size_t			ft_strlen(const char *s);
 void			*ft_calloc(size_t nmemb, size_t size);

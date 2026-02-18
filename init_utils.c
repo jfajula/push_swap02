@@ -6,13 +6,13 @@
 /*   By: jafajula <jafajula@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 20:26:41 by jafajula          #+#    #+#             */
-/*   Updated: 2026/02/11 20:51:32 by jafajula         ###   ########.fr       */
+/*   Updated: 2026/02/18 21:24:03 by jafajula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack_node	*locale_last_node(t_stack_node *head)
+t_stack_node	*locate_last_node(t_stack_node *head)
 {
 	if (head == NULL)
 		return (NULL);
@@ -40,13 +40,13 @@ void	append_node(t_stack_node **stack, int n)
 	}
 	else
 	{
-		last_node = locale_last_node(*stack);
+		last_node = locate_last_node(*stack);
 		last_node->next = node;
 		node->prev = last_node;
 	}
 }
 
-t_stack_node	*locale_smallest(t_stack_node *stack)
+t_stack_node	*locate_smallest(t_stack_node *stack)
 {
 	long			smallest;
 	t_stack_node	*smallest_node;
