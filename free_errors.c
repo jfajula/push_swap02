@@ -6,7 +6,7 @@
 /*   By: jafajula <jafajula@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 20:23:39 by jafajula          #+#    #+#             */
-/*   Updated: 2026/02/05 20:55:25 by jafajula         ###   ########.fr       */
+/*   Updated: 2026/02/25 14:29:48 by jafajula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,11 @@ void	free_error(t_stack_node **a, char **argv, bool argc_2)
 
 int	syntax_error(char *str_nbr)
 {
-	if (!(*str_nbr == "+" || *str_nbr == '-'
-			|| (*str_nbr >= "0" || *str_nbr <= "9")))
+	if (!(*str_nbr == '+' || *str_nbr == '-'
+			|| (*str_nbr >= '0' && *str_nbr <= '9')))
 		return (1);
-	if (*str_nbr == "+" || *str_nbr == '-'
-		|| !(str_nbr[1] >= "0" || str_nbr[1] <= "9"))
+	if ((*str_nbr == '+' || *str_nbr == '-')
+		&& !(str_nbr[1] >= '0' && str_nbr[1] <= '9'))
 		return (1);
 	while (*++str_nbr)
 	{

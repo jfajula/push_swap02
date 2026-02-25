@@ -6,7 +6,7 @@
 /*   By: jafajula <jafajula@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 20:35:14 by jafajula          #+#    #+#             */
-/*   Updated: 2026/02/18 22:22:17 by jafajula         ###   ########.fr       */
+/*   Updated: 2026/02/25 12:50:04 by jafajula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ void	set_cost(t_stack_node *a, t_stack_node *b)
 	{
 		b->cost = b->current_position;
 		if (!(b->above))
+			b->cost = len_b - (b->current_position);
+		if (b->target_node->above)
 			b->cost += b->target_node->current_position;
 		else
 			b->cost += len_a - (b->target_node->current_position);
@@ -85,6 +87,7 @@ void	set_cheapest(t_stack_node *b)
 
 	if (b == NULL)
 		return ;
+	best_match_cost = LONG_MAX;
 	while (b)
 	{
 		if (b->cost < best_match_cost)

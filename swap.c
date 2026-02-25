@@ -6,7 +6,7 @@
 /*   By: jafajula <jafajula@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 19:58:09 by jafajula          #+#    #+#             */
-/*   Updated: 2026/02/11 20:16:28 by jafajula         ###   ########.fr       */
+/*   Updated: 2026/02/25 12:56:11 by jafajula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	swap(t_stack_node **head)
 {
-	int				len;
+	int	len;
 
 	len = stack_len(*head);
 	if (head == NULL || *head == NULL || len == 1)

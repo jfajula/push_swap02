@@ -6,7 +6,7 @@
 /*   By: jafajula <jafajula@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 19:44:49 by jafajula          #+#    #+#             */
-/*   Updated: 2026/02/05 20:54:23 by jafajula         ###   ########.fr       */
+/*   Updated: 2026/02/25 12:37:48 by jafajula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,5 @@ void	init_stack(t_stack_node **a, char **argv, bool argc_2)
 		i++;
 	}
 	if (argc_2)
-		free(argv);
+		free_argv(argv);
 }

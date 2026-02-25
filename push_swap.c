@@ -6,7 +6,7 @@
 /*   By: jafajula <jafajula@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 19:45:19 by jafajula          #+#    #+#             */
-/*   Updated: 2026/02/11 19:43:28 by jafajula         ###   ########.fr       */
+/*   Updated: 2026/02/25 15:35:12 by jafajula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,13 @@ int	main(int argc, char **argv)
 	a = NULL;
 	b = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
+	{
+		if (argc == 2 && !argv[1][0])
+			write(2, "Error\n", 6);
 		return (1);
+	}
 	else if (argc == 2)
-		argv = ft_split(argv[1], ' ');
+		argv = split_ps(argv[1], ' ');
 	init_stack(&a, argv + 1, argc == 2);
 	if (!stack_sort(a))
 	{
@@ -33,5 +37,5 @@ int	main(int argc, char **argv)
 		else
 			sort_stack(&a, &b);
 	}
-	free_stack(a);
+	free_stack(&a);
 }

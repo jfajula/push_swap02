@@ -6,7 +6,7 @@
 /*   By: jafajula <jafajula@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 21:17:22 by jafajula          #+#    #+#             */
-/*   Updated: 2026/02/18 22:22:50 by jafajula         ###   ########.fr       */
+/*   Updated: 2026/02/25 09:56:31 by jafajula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ bool	stack_sort(t_stack_node *stack)
 	return (true);
 }
 
-t_stack_node	*locate_biggest(t_stack_node *stack)
+static t_stack_node	*locate_biggest(t_stack_node *stack)
 {
 	int				biggest;
 	t_stack_node	*biggest_node;
