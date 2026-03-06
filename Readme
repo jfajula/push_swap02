@@ -29,10 +29,17 @@
 
 ---
 ## **INSTRUCTIONS**
-* Compile with < make >
+* Compile with 'make' 
 
-* Execute with <./push_swap "(numbers to sort)"> or <./push_swap (numbers to sort)>
+* Execute with './push_swap "(numbers to sort)"> or <./push_swap (numbers to sort)'
+
 ---
 ## **RESOURCES**
-a
+
+The algorithm I used:<br>
+https://pure-forest.medium.com/push-swap-turk-algorithm-explained-in-6-steps-4c6650a458c0
+
+A visualizer to help to figure out what is happening:<br>
+https://push-swap42-visualizer.vercel.app/
+
 ---

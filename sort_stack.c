@@ -6,7 +6,7 @@
 /*   By: jafajula <jafajula@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 21:43:35 by jafajula          #+#    #+#             */
-/*   Updated: 2026/02/25 12:52:11 by jafajula         ###   ########.fr       */
+/*   Updated: 2026/03/06 18:37:10 by jafajula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	rr_ab(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest_n)
 	while (*a != cheapest_n->target_node && *b != cheapest_n)
 		rrr(a, b);
 	set_current_position(*a);
-	set_current_position(*b);	
+	set_current_position(*b);
 }
 
 void	finish_rotation(t_stack_node **s, t_stack_node *top, char stack_name)
